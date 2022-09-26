@@ -3,6 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/a203189761/Documents/GitHub/PruebaPantallas1/app/src/main/res/drawable/boton1.xml" value="0.31" />
+        <entry key="..\:/Users/a203189761/Documents/GitHub/PruebaPantallas1/app/src/main/res/drawable/boton1p2.xml" value="0.31" />
+        <entry key="..\:/Users/a203189761/Documents/GitHub/PruebaPantallas1/app/src/main/res/drawable/boton2.xml" value="0.31" />
+        <entry key="..\:/Users/a203189761/Documents/GitHub/PruebaPantallas1/app/src/main/res/drawable/btncp.xml" value="0.1" />
+        <entry key="..\:/Users/a203189761/Documents/GitHub/PruebaPantallas1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/a203189761/Documents/GitHub/PruebaPantallas1/app/src/main/res/layout/activity_comprar.xml" value="0.5" />
+        <entry key="..\:/Users/a203189761/Documents/GitHub/PruebaPantallas1/app/src/main/res/layout/activity_compras.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/a203189761/Documents/GitHub/PruebaPantallas1/app/src/main/res/layout/activity_main.xml" value="0.32019927536231885" />
+        <entry key="..\:/Users/a203189761/Documents/GitHub/PruebaPantallas1/app/src/main/res/layout/activity_main2.xml" value="0.33" />
+        <entry key="..\:/Users/a203189761/Documents/GitHub/PruebaPantallas1/app/src/main/res/layout/activity_mapa.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/a203189761/Documents/GitHub/PruebaPantallas1/app/src/main/res/layout/activity_venta.xml" value="0.3432971014492754" />
+        <entry key="..\:/Users/a203189761/Documents/GitHub/PruebaPantallas1/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.31" />
+        <entry key="..\:/Users/a203189761/Documents/GitHub/PruebaPantallas1/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.31" />
+        <entry key="..\:/Users/alanv/Downloads/PruebaPantallas1/PruebaPantallas1/app/src/main/res/layout/activity_main2.xml" value="0.358695652173913" />
         <entry key="..\:/Users/alanv/PruebaPantallas1/app/src/main/res/drawable/boton1.xml" value="0.3635" />
         <entry key="..\:/Users/alanv/PruebaPantallas1/app/src/main/res/drawable/boton1p2.xml" value="0.362" />
         <entry key="..\:/Users/alanv/PruebaPantallas1/app/src/main/res/drawable/boton2.xml" value="0.189" />

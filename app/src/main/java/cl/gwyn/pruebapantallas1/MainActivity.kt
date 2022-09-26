@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         //screenSplash.setKeepOnScreenCondition{true}
 
-        val btn1: Button = findViewById(R.id.button2)
+        val btn1: Button = findViewById(R.id.button)
         btn1.setOnClickListener{
             val intent: Intent= Intent(this, MainActivity2::class.java)
             startActivity(intent)

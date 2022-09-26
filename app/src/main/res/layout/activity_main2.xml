@@ -7,154 +7,234 @@
     android:background="#34495E"
     tools:context=".MainActivity2">
 
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="267dp"
+    <LinearLayout
+        android:id="@+id/layventa"
+        android:layout_width="413dp"
         android:layout_height="54dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/boton1"
-        android:text="Venta"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="266dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/boton1"
-        android:text="Compras"
-        app:layout_constraintBottom_toTopOf="@+id/button8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button9" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="266dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="74dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/boton1"
-        android:text="Comprar"
-        app:layout_constraintBottom_toTopOf="@+id/button9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="267dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="100dp"
-        android:background="@drawable/boton1"
-        android:text="MAPA"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="175dp"
-        android:layout_height="106dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="4dp"
+        android:background="#7900796B"
+        app:layout_constraintBottom_toTopOf="@+id/laycomprar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icon2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="78dp"
+            android:layout_height="44dp"
+            app:srcCompat="@drawable/iconvt" />
+
+        <Button
+            android:id="@+id/venta"
+            android:layout_width="334dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:background="@drawable/boton1p2"
+            android:text="VENTA" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lymapa"
+        android:layout_width="413dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="207dp"
+        android:background="#7900796B"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/laycompras">
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="79dp"
+            android:layout_height="47dp"
+            app:srcCompat="@drawable/iconmap1" />
+
+        <Button
+            android:id="@+id/MAPA"
+            android:layout_width="334dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:background="@drawable/boton1p2"
+            android:text="MAPA" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/laycompras"
+        android:layout_width="413dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#7900796B"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/lymapa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/laycomprar">
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="78dp"
+            android:layout_height="47dp"
+            app:srcCompat="@drawable/iconptd" />
+
+        <Button
+            android:id="@+id/Compras"
+            android:layout_width="334dp"
+            android:layout_height="42dp"
+            android:background="@drawable/boton1p2"
+            android:text="Lista de Productos" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/laycomprar"
+        android:layout_width="413dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="#7900796B"
+        app:layout_constraintBottom_toTopOf="@+id/laycompras"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layventa">
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="78dp"
+            android:layout_height="48dp"
+            app:srcCompat="@drawable/compra" />
+
+        <Button
+            android:id="@+id/Comprar"
+            android:layout_width="334dp"
+            android:layout_height="42dp"
+            android:background="@drawable/boton1p2"
+            android:text="Comprar" />
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginEnd="89dp"
         android:text="Bienvenido Usuario"
         android:textColor="#DC7633"
         android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="146dp"
+        android:layout_marginEnd="124dp"
         android:text="Buen dia"
         android:textColor="#82DC33"
         android:textSize="36sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="78dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="299dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView10"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:id="@+id/imageView2"
+        android:layout_width="212dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="89dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/compra" />
+        app:srcCompat="@drawable/perfil" />
 
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="78dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="57dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView11"
-        app:layout_constraintEnd_toStartOf="@+id/button9"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9"
-        app:srcCompat="@drawable/iconvt" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="78dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView12"
-        app:layout_constraintEnd_toStartOf="@+id/button7"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10"
-        app:srcCompat="@drawable/iconptd" />
-
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="79dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="83dp"
+    <LinearLayout
+        android:id="@+id/lyiconos"
+        android:layout_width="176dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="232dp"
+        android:layout_marginBottom="2dp"
+        android:background="#34495E"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button8"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11"
-        app:srcCompat="@drawable/iconmap1" /><![CDATA[
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="49dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/contacto" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="61dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/instagram" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="66dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/facebook" />
+    </LinearLayout>
+    <![CDATA[
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     />
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ]]>
 </androidx.constraintlayout.widget.ConstraintLayout>
