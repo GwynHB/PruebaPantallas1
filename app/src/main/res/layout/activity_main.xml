@@ -35,7 +35,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonRegis" />
+        app:layout_constraintTop_toBottomOf="@+id/RegisButton" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -47,7 +47,7 @@
         tools:layout_editor_absoluteX="2dp">
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/txemail"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -60,7 +60,7 @@
             android:textColorHint="#FFFFFF" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/txcontra"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -82,7 +82,7 @@
             android:text="Ingresar" />
 
         <Button
-            android:id="@+id/ButtonRegis"
+            android:id="@+id/RegisButton"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:layout_marginStart="32dp"
