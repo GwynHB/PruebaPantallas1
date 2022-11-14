@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "420190328173",
+    "project_id": "counket",
+    "storage_bucket": "counket.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420190328173:android:8fec91959ce678c0423664",
+        "android_client_info": {
+          "package_name": "cl.gwyn.pruebapantallas1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420190328173-a5lfcr755ko9b7khj8qg3ffu4mr9nlou.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cl.gwyn.pruebapantallas1",
+            "certificate_hash": "87aab6eb37c4e223151d7ac135ec2161f90b6d74"
+          }
+        },
+        {
+          "client_id": "420190328173-9om7brogdp18ab98tiarj4opijs0vit7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByY9YMZ7ZLb5GygNEWZa6AuNBeu-plI08"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420190328173-9om7brogdp18ab98tiarj4opijs0vit7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
