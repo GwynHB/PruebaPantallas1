@@ -72,7 +72,7 @@
             android:textColorHint="#FFFFFF" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/loginbutton"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:layout_marginStart="32dp"
@@ -90,16 +90,6 @@
             android:layout_marginEnd="32dp"
             android:background="@drawable/boton2"
             android:text="Registrarse" />
-
-        <Button
-            android:id="@+id/Googlebutton"
-            android:layout_width="346dp"
-            android:layout_height="36dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/boton3"
-            android:drawableStart="@drawable/googleg_standard_color_18"
-            android:text="Google" />
 
     </LinearLayout>
 

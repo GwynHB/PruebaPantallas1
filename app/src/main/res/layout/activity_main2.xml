@@ -122,33 +122,20 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
-        android:layout_marginEnd="89dp"
-        android:text="Bienvenido Usuario"
-        android:textColor="#DC7633"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="146dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="124dp"
         android:text="Buen dia"
         android:textColor="#82DC33"
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/emailtexview" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -157,7 +144,6 @@
         android:layout_marginStart="110dp"
         android:layout_marginTop="26dp"
         android:layout_marginEnd="89dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -193,48 +179,32 @@
             android:layout_height="match_parent"
             app:srcCompat="@drawable/facebook" />
     </LinearLayout>
-    <![CDATA[
 
+    <TextView
+        android:id="@+id/emailtexview"
+        android:layout_width="255dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginEnd="66dp"
+        android:text="Email"
+        android:textColor="#F8F8F8"
+        android:textColorHint="#1B1A1A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:ignore="MissingConstraints" />
 
+    <Button
+        android:id="@+id/buttoncer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="144dp"
+        android:text="Cerrar Sesion"
+        app:layout_constraintEnd_toStartOf="@+id/lyiconos"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lymapa" />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-]]>
 </androidx.constraintlayout.widget.ConstraintLayout>

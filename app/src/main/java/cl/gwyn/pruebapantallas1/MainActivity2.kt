@@ -4,6 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +38,22 @@ class MainActivity2 : AppCompatActivity() {
             val intent: Intent= Intent(this, Mapa::class.java)
             startActivity(intent)
         }
+        //setup
+        val bundle=  intent.extras
+        val email =bundle?.getString("email")
+        setup(email ?: "")
+    }
+    private fun setup(email:String){
+        title ="Inicio"
+        val txview: TextView = findViewById(R.id.emailtexview)
+        txview.text = email
+        val btncer : Button =findViewById(R.id.buttoncer)
+        btncer.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            onBackPressed()
+        }
+
+
 
     }
 }

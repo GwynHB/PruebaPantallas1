@@ -4,12 +4,15 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
+import androidx.appcompat.app.AlertDialog
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        val screenSplash=installSplashScreen()
+        val screenSplash = installSplashScreen()
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -17,12 +20,79 @@ class MainActivity : AppCompatActivity() {
 
         //screenSplash.setKeepOnScreenCondition{true}
 
-        val btn1: Button = findViewById(R.id.button)
-        btn1.setOnClickListener{
-            val intent: Intent= Intent(this, MainActivity2::class.java)
-            startActivity(intent)
+        //setup
+        setup()
+    }
+
+    private fun setup() {
+        title = "registro"
+        val btnreg: Button = findViewById(R.id.RegisButton)
+        val txemail: EditText = findViewById(R.id.txemail)
+        val contraseña: EditText = findViewById(R.id.txcontra)
+        val btnlogin: Button = findViewById(R.id.loginbutton)
+
+        btnreg.setOnClickListener {
+            if (txemail.text.isNotEmpty() && contraseña.text.isNotEmpty()) {
+                FirebaseAuth.getInstance().createUserWithEmailAndPassword(
+                    txemail.text.toString(),
+                    contraseña.text.toString()
+                ).addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        Semenu(it.result?.user?.email ?: "")
+
+                    } else {
+                        alert()
+                    }
+                }
+
+
+            }
+
         }
+        btnlogin.setOnClickListener {
+            if (txemail.text.isNotEmpty() && contraseña.text.isNotEmpty()) {
+                FirebaseAuth.getInstance().signInWithEmailAndPassword(
+                    txemail.text.toString(),
+                    contraseña.text.toString()
+                ).addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        Semenu(it.result?.user?.email ?: "")
+
+                    } else {
+                        alert1()
+                    }
+                }
+
+
+            }
+
+        }
+    }
+
+    private fun alert() {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Error")
+        builder.setMessage("Se Producido un Error En el registro")
+        builder.setPositiveButton("Acepptar", null)
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+    }
+
+    private fun Semenu(email: String) {
+        val menuintent = Intent(this, MainActivity2::class.java).apply {
+            putExtra("email", email)
+        }
+        startActivity(menuintent)
 
     }
 
+    private fun alert1() {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Error")
+        builder.setMessage("usuario no registrado o contraseña incorrecta")
+        builder.setPositiveButton("Aceptar", null)
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+    }
 }
+
