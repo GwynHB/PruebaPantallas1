@@ -1,12 +1,18 @@
 package cl.gwyn.pruebapantallas1
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
+enum class  ProviderType{
+    BASIC,
+    GOOGLE
+}
 
 class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,16 +45,28 @@ class MainActivity2 : AppCompatActivity() {
             startActivity(intent)
         }
         //setup
+
+
         val bundle=  intent.extras
         val email =bundle?.getString("email")
         setup(email ?: "")
+        //Guardado de datos
+        val prefs :SharedPreferences.Editor =getSharedPreferences(getString(R.string.prefs_file),Context.MODE_PRIVATE).edit()
+        prefs.putString("email",email)
+        prefs.apply()
     }
+
     private fun setup(email:String){
         title ="Inicio"
         val txview: TextView = findViewById(R.id.emailtexview)
         txview.text = email
         val btncer : Button =findViewById(R.id.buttoncer)
         btncer.setOnClickListener {
+// con esto al cerrar sesion no la iniciara automaticamente
+            val prefs :SharedPreferences.Editor =getSharedPreferences(getString(R.string.prefs_file),Context.MODE_PRIVATE).edit()
+            prefs.clear()
+            prefs.apply()
+
             FirebaseAuth.getInstance().signOut()
             onBackPressed()
         }
@@ -56,4 +74,5 @@ class MainActivity2 : AppCompatActivity() {
 
 
     }
+
 }

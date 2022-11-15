@@ -1,15 +1,22 @@
 package cl.gwyn.pruebapantallas1
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
+import androidx.constraintlayout.widget.ConstraintSet.Layout
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
+    private val Google_Sing_IN = 100
     override fun onCreate(savedInstanceState: Bundle?) {
 
         val screenSplash = installSplashScreen()
@@ -22,6 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         //setup
         setup()
+        session()
     }
 
     private fun setup() {
@@ -30,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         val txemail: EditText = findViewById(R.id.txemail)
         val contraseña: EditText = findViewById(R.id.txcontra)
         val btnlogin: Button = findViewById(R.id.loginbutton)
+        val btngoogle :Button =findViewById(R.id.Google)
 
         btnreg.setOnClickListener {
             if (txemail.text.isNotEmpty() && contraseña.text.isNotEmpty()) {
@@ -47,6 +56,16 @@ class MainActivity : AppCompatActivity() {
 
 
             }
+
+        }
+        btngoogle.setOnClickListener {
+            //autenticacion
+           // val googlecf = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestIdToken(getString(R.string.default_web_client_id))
+                //.requestEmail()
+               // .build()
+            //val googleClient = GoogleSignIn.getClient(this,googlecf )
+           //StarActivityFoRresult(googleClient.signInIntent,Google_Sing_IN )
+
 
         }
         btnlogin.setOnClickListener {
@@ -68,7 +87,7 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
-
+//alerta de registro
     private fun alert() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
@@ -85,7 +104,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(menuintent)
 
     }
-
+//alerta de error de inicio de session
     private fun alert1() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
@@ -93,6 +112,16 @@ class MainActivity : AppCompatActivity() {
         builder.setPositiveButton("Aceptar", null)
         val dialog: AlertDialog = builder.create()
         dialog.show()
+    }
+    //inicio de session
+    private  fun session(){
+        val prefs : SharedPreferences =getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE)
+        val email = prefs.getString("email",null)
+        if (email !=null){
+
+            Semenu(email)
+        }
+
     }
 }
 

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PruebaPantallas1</string>
+    <string name="prefs_file" translatable="false">cl.gwyn.pruebapantallas1.PREFERENCE_FILE_KEY</string>
 </resources>
