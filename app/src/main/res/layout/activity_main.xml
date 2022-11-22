@@ -94,18 +94,6 @@
             android:background="@drawable/boton2"
             android:text="Registrarse" />
 
-        <Button
-            android:id="@+id/Google"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="32dp"
-            android:background="@drawable/boton3"
-            android:drawableStart="@drawable/googleg_standard_color_18"
-            android:paddingStart="5dp"
-            android:text="Google" />
-
     </LinearLayout>
 
     <ImageView

@@ -38,7 +38,6 @@ class MainActivity : AppCompatActivity() {
         val txemail: EditText = findViewById(R.id.txemail)
         val contraseña: EditText = findViewById(R.id.txcontra)
         val btnlogin: Button = findViewById(R.id.loginbutton)
-        val btngoogle :Button =findViewById(R.id.Google)
 
         btnreg.setOnClickListener {
             if (txemail.text.isNotEmpty() && contraseña.text.isNotEmpty()) {
@@ -56,16 +55,6 @@ class MainActivity : AppCompatActivity() {
 
 
             }
-
-        }
-        btngoogle.setOnClickListener {
-            //autenticacion
-           // val googlecf = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestIdToken(getString(R.string.default_web_client_id))
-                //.requestEmail()
-               // .build()
-            //val googleClient = GoogleSignIn.getClient(this,googlecf )
-           //StarActivityFoRresult(googleClient.signInIntent,Google_Sing_IN )
-
 
         }
         btnlogin.setOnClickListener {
